@@ -33,6 +33,28 @@ int leerEntero() {
 
 // Función para leer un número flotante, solo acepta dígitos y un punto decimal
 float leerFlotante() {
+    string input = "";
+    char c;
+    bool hasDot = false;
+    cout << "\nIngrese un valor flotante: ";
+    while (true) {
+        c = getch();
+        if (c == 13 && !input.empty()) { // Enter y al menos un dígito
+            break;
+        } else if (c >= '0' && c <= '9') { // Solo dígitos permitidos
+            input += c;
+            cout << c;
+        } else if (c == '.' && !hasDot) { // Solo un punto decimal permitido
+            input += c;
+            hasDot = true;
+            cout << c;
+        } else if (c == 8 && !input.empty()) { // Backspace
+            if (input.back() == '.') hasDot = false;
+            input.pop_back();
+            cout << "\b \b";
+        }
+    }
+    return stof(input);
 }
 
 // Función para leer un valor double, similar a float
