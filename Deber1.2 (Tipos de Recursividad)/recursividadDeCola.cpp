@@ -7,3 +7,20 @@
  * Materia:                        Estructura de datos                 *
  * NRC :                           1992                                *
  ***********************************************************************/
+
+#include <iostream>
+using std::cout;
+using std::endl;
+
+void sumarHastaN(int n, int acumulador = 0) {
+    if (n == 0) {
+        cout << "Suma total: " << acumulador << endl;
+    } else {
+        sumarHastaN(n - 1, acumulador + n);  // Llamada recursiva de cola (última operación)
+    }
+}
+
+int main() {
+    sumarHastaN(5);  // Suma 5 + 4 + 3 + 2 + 1 = 15
+    return 0;
+}
