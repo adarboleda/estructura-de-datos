@@ -12,6 +12,13 @@ using std::stoi;
 using std::stof;
 using std::stod;
 
+int leerEntero(const string& mensaje);
+float leerFlotante(const string& mensaje);
+double leerDoble(const string& mensaje);
+char leerCaracter(const string& mensaje);
+bool leerBooleano(const string& mensaje);
+string leerCadena(const string& mensaje);
+
 // Función para leer un número entero, solo acepta dígitos
 int leerEntero(const string& mensaje) {
     string input = "";
@@ -134,23 +141,4 @@ string leerCadena(const string& mensaje) {
         getline(cin, valor);
     }
     return valor;
-}
-
-int main() {
-    int entero = leerEntero("\nIngrese un valor entero: ");
-    float flotante = leerFlotante("\nIngrese un valor flotante: ");
-    double doble = leerDoble("\nIngrese un valor de doble: ");
-    char caracter = leerCaracter("\nIngrese un caracter: ");
-    bool booleano = leerBooleano("Ingrese un valor booleano (0 para falso, 1 para verdadero): ");
-    string cadena = leerCadena("\nIngrese una cadena de texto: ");
-
-    cout << "\nValores ingresados:\n";
-    cout << "Entero: " << entero << endl;
-    cout << "Flotante: " << flotante << endl;
-    cout << "Doble: " << doble << endl;
-    cout << "Caracter: " << caracter << endl;
-    cout << "Booleano: " << (booleano ? "verdadero" : "falso") << endl;
-    cout << "Cadena: " << cadena << endl;
-
-    return 0;
 }
