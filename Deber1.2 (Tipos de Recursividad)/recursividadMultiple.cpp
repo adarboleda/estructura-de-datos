@@ -7,3 +7,17 @@
  * Materia:                        Estructura de datos                 *
  * NRC :                           1992                                *
  ***********************************************************************/
+
+#include <iostream>
+using std::cout;
+using std::endl;
+
+int fibonacci(int n) {
+    if (n <= 1) return n;
+    return fibonacci(n - 1) + fibonacci(n - 2);  // Dos llamadas recursivas en cada nivel
+}
+
+int main() {
+    cout << "Fibonacci de 5: " << fibonacci(5) << endl;  // Calcula la serie: 0, 1, 1, 2, 3, 5
+    return 0;
+}
