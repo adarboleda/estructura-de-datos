@@ -18,6 +18,6 @@ int fibonacci(int n) {
 }
 
 int main() {
-    cout << "Fibonacci de 5: " << fibonacci(5) << endl;  // Calcula la serie: 0, 1, 1, 2, 3, 5
+    cout << "Fibonacci de 4: " << fibonacci(2) << endl;  // Calcula la serie: 0, 1, 1, 2, 3
     return 0;
 }

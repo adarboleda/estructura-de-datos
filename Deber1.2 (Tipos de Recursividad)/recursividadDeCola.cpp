@@ -21,6 +21,6 @@ void sumarHastaN(int n, int acumulador = 0) {
 }
 
 int main() {
-    sumarHastaN(5);  // Suma 5 + 4 + 3 + 2 + 1 = 15
+    sumarHastaN(3);  // Suma 3 + 2 + 1 = 6
     return 0;
 }

@@ -18,6 +18,6 @@ int factorial(int n) {
 }
 
 int main() {
-    cout << "Factorial de 5: " << factorial(5) << endl;  // Calcula 5 * 4 * 3 * 2 * 1 = 120
+    cout << "Factorial de 3: " << factorial(3) << endl;  // Calcula 3 * 2 * 1 = 6
     return 0;
 }

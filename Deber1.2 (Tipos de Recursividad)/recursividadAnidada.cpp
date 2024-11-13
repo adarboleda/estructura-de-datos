@@ -1,6 +1,6 @@
 /***********************************************************************
  *            UNIVERSIDAD DE LAS FUERZAS ARMADAS ESPE                  *
- * Proposito:                      Función de Ackermann                *
+ * Proposito:                      Función Anidada                     *
  * Autor:                          Abner Arboleda                      *
  * Fecha de creacion:              11/11/2024                          *
  * Fecha de modificacion:          11/11/2024                          *
@@ -12,12 +12,20 @@
 using std::cout;
 using std::endl;
 
-int funcionAnidada(int n) {
-    if (n > 100) return n - 10;
-    return funcionAnidada(funcionAnidada(n + 11));  // Llamada recursiva dentro de otra llamada
+int anidada(int n) {
+    if (n <= 1) {
+        return 1;  // Caso base: si n es 1 o menor, devuelve 1
+    } else {
+        return anidada(anidada(n - 1));  // Llamada recursiva anidada
+    }
 }
 
 int main() {
-    cout << "Resultado: " << funcionAnidada(95) << endl;  // Ejecuta llamadas anidadas
+    int n = 3;
+    cout << "Resultado de anidada(" << n << ") = " << anidada(n) << endl;
     return 0;
 }
+
+
+
+
