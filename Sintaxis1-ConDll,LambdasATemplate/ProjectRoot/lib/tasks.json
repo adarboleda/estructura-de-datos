@@ -1,0 +1,23 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compilar DLL",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-shared",
+                "-o",
+                "./build/MatrizHelper.dll",
+                "./src/MatrizHelper.cpp",
+                "-I./include",
+                "-DBUILD_DLL"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}
